@@ -29,5 +29,7 @@ class LaraMailChimpServiceProvider extends ServiceProvider
 
             return new LaraMailChimp($mailchimp, $listId);
         });
+
+        $this->app->alias(LaraMailChimp::class, 'lara-mailchimp');
     }
 }
