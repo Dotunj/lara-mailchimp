@@ -1,6 +1,7 @@
 {
     "name": "dotunj/lara-mailchimp",
-    "description": "This package automatically adds registered users to a mailchimp list",
+    "description": "This package automatically subscribes registered users to a mailchimp list",
+    "license": "MIT",
     "authors": [
         {
             "name": "Dotunj",
