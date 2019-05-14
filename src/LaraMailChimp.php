@@ -15,15 +15,13 @@ class LaraMailChimp
         $this->mailchimp = $mailChimp;
 
         $this->listId = $listId;
-
     }
 
     public function subscribe($email)
     {
-
         $result = $this->mailchimp->post("lists/$this->listId/members", [
               'email_address' => $email,
-              'status' => 'subscribed'
+              'status' => 'subscribed',
         ]);
 
         return $result;
