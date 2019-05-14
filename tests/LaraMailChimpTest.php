@@ -2,9 +2,9 @@
 
 namespace Dotunj\LaraMailChimp\Tests;
 
-use Orchestra\Testbench\TestCase;
 use Mockery;
 use DrewM\MailChimp\MailChimp;
+use Orchestra\Testbench\TestCase;
 use Dotunj\LaraMailChimp\LaraMailChimp;
 
 class LaraMailChimpTest extends TestCase
@@ -29,17 +29,17 @@ class LaraMailChimpTest extends TestCase
     {
         $email = 'dotun@gmail.com';
 
-        $url = 'lists/' .$this->listId. '/members';
+        $url = 'lists/'.$this->listId.'/members';
 
         $this->mailChimp->shouldReceive('post')->withArgs([
             $url, [
                 'email_address' => $email,
-                'status' => 'subscribed'
+                'status' => 'subscribed',
             ],
         ]);
 
-       $this->laraMailChimp->subscribe($email);
+        $this->laraMailChimp->subscribe($email);
 
-       $this->mailChimp->shouldReceive('success')->andReturn(true);
+        $this->mailChimp->shouldReceive('success')->andReturn(true);
     }
 }

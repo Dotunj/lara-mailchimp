@@ -2,9 +2,9 @@
 
 namespace Dotunj\LaraMailChimp\Listeners;
 
-use Dotunj\LaraMailChimp\Events\UserRegistered;
 use Dotunj\LaraMailChimp\LaraMailChimp;
 use Illuminate\Contracts\Queue\ShouldQueue;
+use Dotunj\LaraMailChimp\Events\UserRegistered;
 
 class SubscribeUserToMailChimp implements ShouldQueue
 {

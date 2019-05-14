@@ -2,8 +2,8 @@
 
 namespace Dotunj\LaraMailChimp\Events;
 
-use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Queue\SerializesModels;
+use Illuminate\Contracts\Queue\ShouldQueue;
 
 class UserRegistered implements ShouldQueue
 {
