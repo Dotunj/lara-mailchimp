@@ -1,0 +1,31 @@
+{
+    "name": "dotunj/lara-mailchimp",
+    "description": "This package automatically adds registered users to a mailchimp list",
+    "authors": [
+        {
+            "name": "Dotunj",
+            "email": "dotunjolaosho@yahoo.com"
+        }
+    ],
+    "require": {
+        "drewm/mailchimp-api": "^2.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Dotunj\\LaraMailChimp\\": "src"
+        }
+    },
+    "require-dev": {
+        "orchestra/testbench": "^3.5"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Dotunj\\LaraMailChimp\\LaraMailChimpServiceProvider"
+            ],
+            "aliases": {
+                "LaraMailChimp": "Dotunj\\LaraMailChimp\\Facades\\LaraMailChimp"
+            }
+        }
+    }
+}
